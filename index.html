@@ -1,0 +1,3471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CESGS UNAIR | Indonesia's ESG Authority. Built for the Boardroom.</title>
+<meta name="description" content="The only Indonesian ESG advisory combining IFRS Sustainability Alliance access, PUI-PT academic authority, and a Triple Helix delivery model. Trusted by Astra, Indosat, SKK Migas, and OJK." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Karla:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --teal: #1480A1;
+    --teal-dark: #0E6B89;
+    --teal-darker: #0A536A;
+    --teal-light: #2EA0C2;
+    --teal-50: #E8F3F7;
+    --teal-100: #D1E8EF;
+    --navy: #19355A;
+    --navy-dark: #0F2541;
+    --navy-darker: #081729;
+    --navy-light: #2D5380;
+    --amber: #E0AC2B;
+    --amber-light: #F4C04E;
+    --rose: #E15E5E;
+    --green: #2DA86C;
+    --ink-900: #0F1419;
+    --ink-700: #2B2E32;
+    --ink-500: #5A6068;
+    --ink-300: #8B919A;
+    --ink-200: #B8BDC4;
+    --gray-50: #F7F8FA;
+    --gray-100: #EFF1F4;
+    --gray-200: #E2E5EA;
+    --gray-300: #CDD2D9;
+    --paper: #FFFFFF;
+    --max-w: 1280px;
+    --shadow-xs: 0 1px 2px rgba(15,37,65,0.04);
+    --shadow-sm: 0 2px 6px rgba(15,37,65,0.06);
+    --shadow-md: 0 12px 32px rgba(15,37,65,0.08);
+    --shadow-lg: 0 24px 60px rgba(15,37,65,0.12);
+    --shadow-xl: 0 40px 100px rgba(15,37,65,0.20);
+    --r-sm: 6px; --r-md: 10px; --r-lg: 16px; --r-xl: 24px; --r-pill: 999px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; font-family: 'Karla', Arial, sans-serif; background: var(--paper); color: var(--ink-700); line-height: 1.6; font-size: 19.2px; overflow-x: hidden; }
+  a { color: inherit; text-decoration: none; }
+  img { max-width: 100%; display: block; }
+  .container { max-width: var(--max-w); margin: 0 auto; padding: 0 24px; }
+  .display { font-family: 'Inter', sans-serif; letter-spacing: -0.025em; }
+  .mono { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.02em; }
+
+  /* === Announcement bar === */
+  .announce {
+    background: var(--navy-dark);
+    color: rgba(255,255,255,0.92);
+    padding: 11px 0;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .announce::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 90% 50%, rgba(224,172,43,0.15), transparent 40%);
+    pointer-events: none;
+  }
+  .announce-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    position: relative;
+    z-index: 1;
+    flex-wrap: wrap;
+  }
+  .announce-tag {
+    background: var(--amber);
+    color: var(--navy-dark);
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .announce a {
+    color: #FFF;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 600;
+  }
+  .countdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+    padding: 3px 10px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14.4px;
+    font-weight: 600;
+  }
+  .pulse-dot {
+    width: 6px; height: 6px;
+    background: var(--amber);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.3); }
+  }
+
+  /* === Navigation === */
+  .nav-wrap {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: saturate(180%) blur(16px);
+    -webkit-backdrop-filter: saturate(180%) blur(16px);
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    gap: 32px;
+  }
+  .logo-block {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  .logo-img {
+    height: 56px;
+    width: auto;
+    display: block;
+  }
+  .footer-brand .logo-img {
+    height: 72px;
+    width: auto;
+    opacity: 1;
+    filter: none;
+  }
+  .nav-menu {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+    flex: 1;
+    justify-content: center;
+  }
+  .nav-item {
+    position: relative;
+  }
+  .nav-item > a {
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--ink-700);
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 8px 0;
+  }
+  .nav-item > a:hover { color: var(--teal); }
+  .nav-item .caret { font-size: 10.8px; opacity: 0.6; transition: transform 0.2s; }
+  .nav-item:hover .caret { transform: rotate(180deg); }
+
+  /* Mega menu */
+  .mega {
+    position: absolute;
+    top: calc(100% + 16px);
+    left: 50%;
+    transform: translateX(-50%) translateY(-8px);
+    background: var(--paper);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--r-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 28px;
+    min-width: 560px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease;
+    z-index: 100;
+  }
+  .nav-item:hover .mega {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+  }
+  .mega-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 28px;
+  }
+  .mega-item {
+    padding: 12px;
+    border-radius: var(--r-md);
+    transition: background 0.15s;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .mega-item:hover { background: var(--teal-50); }
+  .mega-icon {
+    width: 36px; height: 36px;
+    background: var(--teal-50);
+    border-radius: var(--r-sm);
+    display: grid;
+    place-items: center;
+    color: var(--teal);
+    flex-shrink: 0;
+  }
+  .mega-icon svg { width: 18px; height: 18px; }
+  .mega-item:hover .mega-icon {
+    background: var(--teal);
+    color: #FFF;
+  }
+  .mega-text .title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16.8px;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .mega-text .desc {
+    font-size: 15px;
+    color: var(--ink-500);
+    line-height: 1.4;
+  }
+  .mega-cta {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mega-cta .featured {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.4px;
+    color: var(--ink-500);
+  }
+  .mega-cta .featured strong {
+    color: var(--navy);
+    display: block;
+    font-size: 15.6px;
+    margin-bottom: 2px;
+  }
+
+  /* Nav actions */
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: var(--r-md);
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 17.4px;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .btn-primary { background: var(--teal); color: #FFF; }
+  .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); box-shadow: var(--shadow-md); }
+  .btn-navy { background: var(--navy); color: #FFF; }
+  .btn-navy:hover { background: var(--navy-dark); }
+  .btn-amber { background: var(--amber); color: var(--navy-dark); }
+  .btn-amber:hover { background: var(--amber-light); }
+  .btn-outline { background: transparent; color: var(--teal); border: 1.5px solid var(--teal); }
+  .btn-outline:hover { background: var(--teal); color: #FFF; }
+  .btn-outline-light { background: transparent; color: #FFF; border: 1.5px solid rgba(255,255,255,0.4); }
+  .btn-outline-light:hover { background: rgba(255,255,255,0.1); border-color: #FFF; }
+  .btn-ghost { background: transparent; color: var(--navy); padding: 8px 14px; }
+  .btn-ghost:hover { color: var(--teal); background: var(--teal-50); }
+  .btn-lg { padding: 14px 28px; font-size: 18px; }
+  .arrow { transition: transform 0.2s; font-weight: 700; }
+  .btn:hover .arrow { transform: translateX(3px); }
+  .btn-icon { width: 36px; height: 36px; padding: 0; border-radius: 50%; background: var(--gray-100); color: var(--ink-700); display: grid; place-items: center; }
+  .btn-icon:hover { background: var(--gray-200); }
+
+  /* === Hero === */
+  .hero {
+    position: relative;
+    padding: 80px 0 120px;
+    background:
+      radial-gradient(circle at 90% 10%, rgba(20,128,161,0.10) 0%, transparent 50%),
+      radial-gradient(circle at 10% 90%, rgba(25,53,90,0.08) 0%, transparent 50%),
+      linear-gradient(180deg, var(--paper) 0%, var(--gray-50) 100%);
+    overflow: hidden;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 80px;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 14px;
+    background: var(--teal-50);
+    border: 1px solid var(--teal-100);
+    color: var(--teal-dark);
+    border-radius: var(--r-pill);
+    font-family: 'Inter', sans-serif;
+    font-size: 15.6px;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .hero-pill .dot {
+    width: 8px; height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+    box-shadow: 0 0 8px var(--teal);
+  }
+  .hero h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(44px, 5.6vw, 68px);
+    line-height: 1.06;
+    letter-spacing: -0.03em;
+    color: var(--navy);
+    margin: 0 0 24px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    color: var(--teal);
+  }
+  .hero h1 .underline {
+    position: relative;
+    display: inline-block;
+    color: var(--navy);
+  }
+  .hero h1 .underline::after {
+    content: '';
+    position: absolute;
+    bottom: 6px; left: 0; right: 0;
+    height: 6px;
+    background: var(--amber);
+    opacity: 0.32;
+    z-index: -1;
+    border-radius: 1px;
+  }
+  .hero-lead {
+    font-size: 22.8px;
+    color: var(--ink-500);
+    max-width: 560px;
+    margin: 0 0 36px;
+    line-height: 1.55;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+  }
+  .hero-trust {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    padding-top: 28px;
+    border-top: 1px solid var(--gray-100);
+  }
+  .trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16.2px;
+    color: var(--ink-500);
+  }
+  .trust-item svg {
+    width: 18px; height: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+
+  /* Hero visual: Assessment widget */
+  .hero-widget {
+    background: var(--paper);
+    border-radius: var(--r-xl);
+    padding: 36px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--gray-100);
+    position: relative;
+  }
+  .hero-widget::before {
+    content: '';
+    position: absolute;
+    top: -1px; left: -1px; right: -1px; bottom: -1px;
+    background: linear-gradient(160deg, rgba(20,128,161,0.18) 0%, rgba(25,53,90,0.08) 60%, transparent 100%);
+    border-radius: var(--r-xl);
+    z-index: -1;
+    filter: blur(28px);
+  }
+  .widget-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .widget-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--gray-100);
+    color: var(--ink-500);
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.2px;
+    font-weight: 600;
+  }
+  .widget-live {
+    width: 6px; height: 6px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .widget-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 26.4px;
+    color: var(--navy);
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .widget-sub {
+    font-size: 16.8px;
+    color: var(--ink-500);
+    margin: 0 0 24px;
+  }
+  .widget-questions {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+  .widget-q {
+    background: var(--gray-50);
+    border-radius: var(--r-md);
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+  }
+  .widget-q:hover {
+    background: var(--teal-50);
+    border-color: var(--teal-100);
+    transform: translateX(4px);
+  }
+  .widget-q .q-text {
+    font-size: 16.8px;
+    color: var(--ink-700);
+    font-weight: 500;
+  }
+  .widget-q .q-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14.4px;
+    color: var(--ink-300);
+    flex-shrink: 0;
+    font-weight: 600;
+  }
+  .widget-q .q-check {
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--gray-300);
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+  .widget-q.done .q-check {
+    background: var(--green);
+    border-color: var(--green);
+    color: #FFF;
+    display: grid;
+    place-items: center;
+  }
+  .widget-q.done .q-check::after { content: '✓'; font-size: 14.4px; line-height: 1; }
+  .widget-progress {
+    background: var(--gray-100);
+    border-radius: var(--r-pill);
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+  .widget-progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--teal), var(--teal-light));
+    border-radius: var(--r-pill);
+    position: relative;
+    transition: width 0.35s cubic-bezier(.4, 0, .2, 1);
+  }
+  .widget-progress-bar::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 20px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4));
+    border-radius: var(--r-pill);
+  }
+  .widget-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: var(--ink-500);
+  }
+  .widget-cta {
+    margin-top: 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* === Logo strip === */
+  .logo-strip {
+    background: var(--paper);
+    padding: 48px 0;
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+  }
+  .logo-strip-label {
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--ink-500);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+  }
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 48px 32px;
+    align-items: center;
+    justify-items: center;
+  }
+  @media (max-width: 960px) {
+    .logo-grid { grid-template-columns: repeat(3, 1fr); gap: 36px 24px; }
+  }
+  @media (max-width: 560px) {
+    .logo-grid { grid-template-columns: repeat(2, 1fr); gap: 28px 20px; }
+  }
+  .client-logo {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 20.4px;
+    color: var(--navy);
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    text-align: center;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    min-height: 108px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+  }
+  .client-logo:hover { opacity: 1; }
+  .client-logo .sub {
+    font-family: 'Karla', sans-serif;
+    font-size: 11.4px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-300);
+  }
+  .client-logo.image {
+    filter: grayscale(100%);
+    transition: filter 0.25s, opacity 0.25s;
+  }
+  .client-logo.image:hover { filter: grayscale(0%); opacity: 1; }
+  .client-logo.image .logo-frame {
+    height: 72px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .client-logo.image img {
+    max-height: 72px;
+    max-width: 180px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .client-logo .label {
+    line-height: 1;
+  }
+
+  /* === Section base === */
+  .section { padding: 96px 0; }
+  .section-head {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 56px;
+  }
+  .section-head.left { text-align: left; margin-left: 0; }
+  .section-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--teal);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  .section-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background: var(--teal);
+    display: inline-block;
+  }
+  .section-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 4.6vw, 54px);
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+    color: var(--navy);
+    margin: 0 0 20px;
+  }
+  .section-title em {
+    font-style: normal;
+    color: var(--teal);
+  }
+  .section-lead {
+    font-size: 21.6px;
+    color: var(--ink-500);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* === Memberships section === */
+  .memberships {
+    background: var(--paper);
+    padding: 80px 0;
+    border-top: 1px solid var(--gray-100);
+  }
+  .memberships-inner {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 64px;
+    align-items: center;
+  }
+  .memberships-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--teal);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  .memberships-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background: var(--teal);
+  }
+  .memberships-text h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(26px, 3vw, 34px);
+    line-height: 1.2;
+    letter-spacing: -0.022em;
+    color: var(--navy);
+    margin: 0 0 16px;
+  }
+  .memberships-text p {
+    font-size: 16.5px;
+    color: var(--ink-500);
+    line-height: 1.65;
+    margin: 0;
+    max-width: 560px;
+  }
+  .memberships-logos {
+    display: flex;
+    justify-content: center;
+  }
+  .member-badge {
+    background: var(--gray-50);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--r-lg);
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 320px;
+    width: 100%;
+    transition: all 0.25s;
+  }
+  .member-badge:hover {
+    border-color: var(--teal);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+  }
+  .member-logo-frame {
+    background: var(--paper);
+    border-radius: var(--r-md);
+    padding: 20px 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 96px;
+  }
+  .member-logo-frame img {
+    max-height: 64px;
+    max-width: 220px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+  }
+  .member-meta {
+    text-align: center;
+  }
+  .member-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15.5px;
+    color: var(--navy);
+    margin-bottom: 4px;
+    letter-spacing: -0.005em;
+  }
+  .member-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-500);
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  @media (max-width: 960px) {
+    .memberships-inner { grid-template-columns: 1fr; gap: 40px; }
+    .memberships-logos { justify-content: flex-start; }
+  }
+
+  /* === IFRS Hero Program (B2B-flavored) === */
+  .ifrs {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--teal-darker) 100%);
+    color: #FFF;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .ifrs::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 80% 0%, rgba(224,172,43,0.18), transparent 50%),
+      radial-gradient(ellipse at 0% 100%, rgba(20,128,161,0.30), transparent 50%);
+    pointer-events: none;
+  }
+  .ifrs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+  }
+  .ifrs-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 16px;
+    background: rgba(224,172,43,0.15);
+    border: 1px solid rgba(224,172,43,0.4);
+    color: var(--amber-light);
+    border-radius: var(--r-pill);
+    font-family: 'Inter', sans-serif;
+    font-size: 14.4px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .ifrs h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.1;
+    color: #FFF;
+    margin: 0 0 24px;
+    letter-spacing: -0.025em;
+  }
+  .ifrs h2 em {
+    font-style: normal;
+    color: var(--amber);
+  }
+  .ifrs-lead {
+    font-size: 20.4px;
+    color: rgba(255,255,255,0.78);
+    line-height: 1.6;
+    margin: 0 0 32px;
+  }
+  .timeline-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    margin-bottom: 32px;
+    backdrop-filter: blur(10px);
+  }
+  .timeline-card h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 15.6px;
+    margin: 0 0 20px;
+    color: var(--amber);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .tl-item {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+    padding: 14px 0;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .tl-item:first-of-type { border-top: none; padding-top: 0; }
+  .tl-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 600;
+    color: var(--amber);
+    font-size: 16.2px;
+  }
+  .tl-text {
+    font-size: 17.4px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+  }
+  .tier-list { display: grid; gap: 14px; }
+  .tier {
+    padding: 24px 26px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: var(--r-lg);
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+  .tier::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--teal-light);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .tier:hover {
+    background: rgba(20,128,161,0.15);
+    border-color: var(--teal-light);
+    transform: translateX(4px);
+  }
+  .tier:hover::before { opacity: 1; }
+  .tier.featured {
+    background: rgba(224,172,43,0.10);
+    border-color: rgba(224,172,43,0.4);
+  }
+  .tier.featured::before { background: var(--amber); opacity: 1; }
+  .tier-head {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 6px;
+  }
+  .tier-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 21.6px;
+    color: #FFF;
+    font-weight: 700;
+  }
+  .tier-dur {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 14.4px;
+    color: var(--amber);
+    font-weight: 600;
+  }
+  .tier-best {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    color: var(--navy-dark);
+    background: var(--amber);
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .tier-desc {
+    font-size: 16.2px;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.5;
+  }
+  .tier-feats {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .tier-feat {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 13.2px;
+    color: rgba(255,255,255,0.6);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .tier-feat::before {
+    content: '·';
+    color: var(--teal-light);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+  .tier-cta {
+    margin-top: 32px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* === Inside the program === */
+  .inside-program {
+    margin-top: 80px;
+    position: relative;
+    z-index: 1;
+  }
+  .inside-head {
+    max-width: 720px;
+    margin: 0 auto 40px;
+    text-align: center;
+  }
+  .inside-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--amber);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .inside-eyebrow::before {
+    content: '';
+    width: 24px;
+    height: 1.5px;
+    background: var(--amber);
+  }
+  .inside-head h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: clamp(28px, 3.4vw, 38px);
+    line-height: 1.15;
+    color: #FFF;
+    margin: 0 0 14px;
+    letter-spacing: -0.022em;
+  }
+  .inside-head p {
+    font-size: 17px;
+    color: rgba(255,255,255,0.72);
+    line-height: 1.6;
+    margin: 0;
+  }
+  .inside-grid {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr auto 1fr;
+    align-items: stretch;
+    gap: 18px;
+    margin-bottom: 40px;
+  }
+  .inside-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    position: relative;
+    transition: all 0.25s;
+  }
+  .inside-card:hover {
+    background: rgba(20,128,161,0.12);
+    border-color: var(--teal-light);
+    transform: translateY(-2px);
+  }
+  .inside-num {
+    position: absolute;
+    top: 22px;
+    right: 26px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+  .inside-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(224,172,43,0.16);
+    color: var(--amber);
+    border-radius: var(--r-md);
+    display: grid;
+    place-items: center;
+    margin-bottom: 18px;
+  }
+  .inside-icon svg { width: 22px; height: 22px; }
+  .inside-card h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 22px;
+    color: #FFF;
+    margin: 0 0 4px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+  .inside-role {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--amber);
+    letter-spacing: 0.04em;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .inside-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .inside-card li {
+    font-size: 14px;
+    color: rgba(255,255,255,0.78);
+    padding: 7px 0 7px 18px;
+    position: relative;
+    line-height: 1.45;
+  }
+  .inside-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 14px;
+    width: 10px;
+    height: 1.5px;
+    background: var(--teal-light);
+  }
+  .inside-plus {
+    display: grid;
+    place-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 32px;
+    color: rgba(255,255,255,0.35);
+    align-self: center;
+    user-select: none;
+  }
+  .inside-backbone {
+    background: linear-gradient(135deg, rgba(20,128,161,0.12), rgba(25,53,90,0.20));
+    border: 1px solid rgba(20,128,161,0.25);
+    border-radius: var(--r-lg);
+    padding: 24px 32px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .backbone-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    color: var(--teal-light);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 6px 12px;
+    background: rgba(20,128,161,0.18);
+    border: 1px solid rgba(20,128,161,0.35);
+    border-radius: var(--r-pill);
+    flex-shrink: 0;
+  }
+  .inside-backbone p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.55;
+    margin: 0;
+    flex: 1;
+    min-width: 280px;
+  }
+  .inside-backbone strong { color: #FFF; font-weight: 700; }
+  .inside-note {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+    padding: 14px 0 4px;
+    color: rgba(255,255,255,0.5);
+    font-size: 13.5px;
+  }
+  .note-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.45);
+  }
+  .note-items {
+    display: flex;
+    gap: 8px;
+  }
+  .note-item {
+    padding: 4px 10px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: var(--r-pill);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11.5px;
+    color: rgba(255,255,255,0.6);
+    font-weight: 500;
+  }
+  .inside-note p {
+    margin: 0;
+    color: rgba(255,255,255,0.55);
+    font-size: 13.5px;
+    line-height: 1.5;
+  }
+  @media (max-width: 960px) {
+    .inside-grid {
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .inside-plus { padding: 0; }
+    .inside-backbone { flex-direction: column; align-items: flex-start; gap: 12px; }
+  }
+
+  /* === Sector tabs === */
+  .sectors {
+    background: var(--gray-50);
+    padding: 96px 0;
+  }
+  .sector-tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 6px;
+    justify-content: center;
+    margin: 0 auto 40px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gray-200) transparent;
+  }
+  .sector-tabs::-webkit-scrollbar { height: 6px; }
+  .sector-tabs::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 3px; }
+  .sector-tabs::-webkit-scrollbar-track { background: transparent; }
+  .sector-tab {
+    padding: 9px 14px;
+    border-radius: var(--r-pill);
+    flex-shrink: 0;
+    white-space: nowrap;
+    background: var(--paper);
+    border: 1px solid var(--gray-200);
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 13.5px;
+    color: var(--ink-700);
+    cursor: pointer;
+    transition: all 0.2s;
+    line-height: 1.2;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .sector-tab:hover { border-color: var(--teal); color: var(--teal); }
+  .sector-tab.active { background: var(--navy); color: #FFF; border-color: var(--navy); }
+  .sector-tab .count {
+    background: var(--gray-100);
+    color: var(--ink-500);
+    padding: 1px 7px;
+    border-radius: var(--r-pill);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    font-weight: 600;
+    margin-left: 6px;
+  }
+  .sector-tab.active .count { background: rgba(255,255,255,0.2); color: #FFF; }
+  .sector-content {
+    background: var(--paper);
+    border-radius: var(--r-xl);
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-100);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .sector-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 33.6px;
+    color: var(--navy);
+    font-weight: 800;
+    margin: 0 0 12px;
+    letter-spacing: -0.02em;
+  }
+  .sector-content p {
+    font-size: 18.6px;
+    color: var(--ink-500);
+    line-height: 1.65;
+    margin: 0 0 24px;
+  }
+  .sector-stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  .sector-stat {
+    padding: 16px;
+    background: var(--gray-50);
+    border-radius: var(--r-md);
+    border-left: 3px solid var(--teal);
+  }
+  .sector-stat .num {
+    font-family: 'Inter', sans-serif;
+    font-size: 26.4px;
+    color: var(--navy);
+    font-weight: 800;
+    line-height: 1;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .sector-stat .label {
+    font-size: 14.4px;
+    color: var(--ink-500);
+    line-height: 1.4;
+  }
+  .sector-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+  }
+  .sector-bullets li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    font-size: 17.4px;
+    color: var(--ink-700);
+  }
+  .sector-bullets li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 14px;
+    width: 16px; height: 2px;
+    background: var(--teal);
+  }
+  .sector-visual {
+    background: linear-gradient(135deg, var(--teal-50) 0%, var(--gray-50) 100%);
+    border-radius: var(--r-lg);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sector-quote {
+    font-family: 'Inter', sans-serif;
+    font-size: 20.4px;
+    color: var(--navy);
+    line-height: 1.5;
+    margin: 0 0 24px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+  }
+  .sector-quote::before {
+    content: '"';
+    font-size: 72px;
+    color: var(--teal);
+    line-height: 0;
+    position: relative;
+    top: 12px;
+    margin-right: 4px;
+    font-family: 'Inter', sans-serif;
+  }
+  .sector-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .sector-avatar {
+    width: 40px; height: 40px;
+    background: var(--teal);
+    color: #FFF;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16.8px;
+  }
+  .sector-author-info {
+    line-height: 1.3;
+  }
+  .sector-author-name {
+    font-weight: 700;
+    color: var(--navy);
+    font-size: 16.8px;
+  }
+  .sector-author-title {
+    font-size: 14.4px;
+    color: var(--ink-500);
+  }
+
+  /* === Bento differentiation === */
+  .bento {
+    background: var(--paper);
+    padding: 96px 0;
+  }
+  .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(180px, auto);
+    gap: 16px;
+  }
+  .bento-card {
+    background: var(--paper);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--r-lg);
+    padding: 28px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s;
+  }
+  .bento-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal-100);
+  }
+  .bento-card.large { grid-column: span 4; grid-row: span 2; padding: 36px; }
+  .bento-card.medium { grid-column: span 2; grid-row: span 2; padding: 32px; }
+  .bento-card.wide { grid-column: span 4; }
+  .bento-card.small { grid-column: span 2; }
+  .bento-card.dark {
+    background: var(--navy);
+    color: #FFF;
+    border-color: var(--navy);
+  }
+  .bento-card.dark h3 { color: #FFF; }
+  .bento-card.dark p { color: rgba(255,255,255,0.7); }
+  .bento-card.teal {
+    background: linear-gradient(135deg, var(--teal) 0%, var(--teal-dark) 100%);
+    color: #FFF;
+    border-color: var(--teal);
+  }
+  .bento-card.teal h3 { color: #FFF; }
+  .bento-card.teal p { color: rgba(255,255,255,0.78); }
+  .bento-icon {
+    width: 44px; height: 44px;
+    background: var(--teal-50);
+    color: var(--teal);
+    border-radius: var(--r-md);
+    display: grid;
+    place-items: center;
+    margin-bottom: 16px;
+  }
+  .bento-icon svg { width: 22px; height: 22px; }
+  .bento-card.dark .bento-icon, .bento-card.teal .bento-icon {
+    background: rgba(255,255,255,0.15);
+    color: #FFF;
+  }
+  .bento-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 26.4px;
+    color: var(--navy);
+    margin: 0 0 8px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+  }
+  .bento-card.large h3 { font-size: 36px; }
+  .bento-card.medium h3 { font-size: 28.8px; }
+  .bento-card p {
+    font-size: 17.4px;
+    color: var(--ink-500);
+    margin: 0;
+    line-height: 1.55;
+  }
+  .bento-big-num {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(67.2px, 7.2vw, 100.8px);
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    display: block;
+    margin: 12px 0 8px;
+  }
+  .bento-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.15);
+    color: var(--amber);
+    padding: 4px 10px;
+    border-radius: var(--r-pill);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.2px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  /* === Comparison table === */
+  .compare {
+    background: var(--gray-50);
+    padding: 96px 0;
+  }
+  .compare-table {
+    background: var(--paper);
+    border-radius: var(--r-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--gray-100);
+  }
+  .compare-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--gray-100);
+    align-items: center;
+    transition: background 0.15s;
+  }
+  .compare-row:hover { background: var(--gray-50); }
+  .compare-row:last-child { border-bottom: none; }
+  .compare-row.header {
+    background: var(--navy);
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+  }
+  .compare-row.header:hover { background: var(--navy); }
+  .compare-row.header .col-us {
+    background: var(--teal);
+    border-radius: var(--r-md);
+    margin: -8px 0;
+    padding: 12px 16px;
+    position: relative;
+  }
+  .compare-row.header .col-us::before {
+    content: 'RECOMMENDED';
+    position: absolute;
+    top: -10px; left: 50%;
+    transform: translateX(-50%);
+    background: var(--amber);
+    color: var(--navy-dark);
+    padding: 2px 10px;
+    border-radius: var(--r-pill);
+    font-size: 10.8px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .col { text-align: center; font-size: 17.4px; }
+  .col.feature {
+    text-align: left;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: 18px;
+  }
+  .col-us { color: var(--teal); font-weight: 700; }
+  .compare-row.header .col-us { color: #FFF; }
+  .check { color: var(--green); font-size: 21.6px; font-weight: 700; }
+  .cross { color: var(--rose); font-size: 21.6px; font-weight: 700; }
+  .partial { color: var(--amber); font-size: 16.8px; font-weight: 600; }
+
+  /* === Resources === */
+  .resources {
+    background: var(--paper);
+    padding: 96px 0;
+  }
+  .resource-filters {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  .filter-chip {
+    padding: 8px 18px;
+    border-radius: var(--r-pill);
+    background: var(--gray-50);
+    border: 1px solid var(--gray-200);
+    font-family: 'Karla', sans-serif;
+    font-weight: 600;
+    font-size: 16.2px;
+    color: var(--ink-700);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .filter-chip.active { background: var(--navy); color: #FFF; border-color: var(--navy); }
+  .filter-chip:hover { border-color: var(--teal); color: var(--teal); }
+  .filter-chip.active:hover { color: #FFF; border-color: var(--navy); }
+  .resources-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .resource-card {
+    background: var(--paper);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--r-lg);
+    overflow: hidden;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+  }
+  .resource-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--teal-100);
+  }
+  .resource-thumb {
+    aspect-ratio: 16/9;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--teal-darker) 100%);
+    position: relative;
+    overflow: hidden;
+  }
+  .resource-thumb.alt-1 { background: linear-gradient(135deg, var(--teal) 0%, var(--navy) 100%); }
+  .resource-thumb.alt-2 { background: linear-gradient(135deg, var(--navy-dark) 0%, var(--teal-dark) 100%); }
+  .resource-thumb.alt-3 { background: linear-gradient(135deg, var(--teal-darker) 0%, var(--navy-darker) 100%); }
+  .resource-thumb.alt-4 { background: linear-gradient(135deg, var(--teal-light) 0%, var(--navy) 100%); }
+  .resource-thumb.alt-5 { background: linear-gradient(135deg, var(--navy-light) 0%, var(--teal-dark) 100%); }
+  .resource-thumb.alt-6 { background: linear-gradient(135deg, var(--navy) 0%, var(--teal) 100%); }
+  .resource-thumb::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 70% 30%, rgba(255,255,255,0.18), transparent 50%);
+  }
+  .resource-type {
+    position: absolute;
+    top: 14px; left: 14px;
+    background: rgba(255,255,255,0.96);
+    color: var(--navy);
+    padding: 5px 11px;
+    border-radius: 4px;
+    font-family: 'Inter', sans-serif;
+    font-size: 12.6px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    z-index: 1;
+  }
+  .resource-gated {
+    position: absolute;
+    top: 14px; right: 14px;
+    width: 28px; height: 28px;
+    background: rgba(255,255,255,0.96);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    color: var(--amber);
+    z-index: 1;
+  }
+  .resource-gated svg { width: 14px; height: 14px; }
+  .resource-body {
+    padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .resource-meta {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.8px;
+    color: var(--ink-300);
+    letter-spacing: 0.02em;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+  }
+  .resource-meta .sep { color: var(--gray-200); }
+  .resource-body h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 21.6px;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 0 0 12px;
+    line-height: 1.3;
+    letter-spacing: -0.01em;
+    flex: 1;
+  }
+  .resource-body p {
+    font-size: 16.8px;
+    color: var(--ink-500);
+    line-height: 1.55;
+    margin: 0 0 18px;
+  }
+  .resource-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .resource-link a {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 16.2px;
+    color: var(--teal);
+  }
+  .resource-tags {
+    display: flex;
+    gap: 6px;
+  }
+  .resource-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.6px;
+    color: var(--ink-300);
+    padding: 2px 7px;
+    border-radius: 3px;
+    background: var(--gray-50);
+  }
+
+  /* === Stats counter === */
+  .counter-band {
+    background: var(--navy);
+    color: #FFF;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .counter-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 20% 50%, rgba(20,128,161,0.25), transparent 40%),
+      radial-gradient(circle at 80% 50%, rgba(224,172,43,0.10), transparent 40%);
+  }
+  .counter-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    position: relative;
+    z-index: 1;
+  }
+  .counter-cell {
+    border-right: 1px solid rgba(255,255,255,0.12);
+    padding: 0 16px;
+  }
+  .counter-cell:last-child { border-right: none; }
+  .counter-num {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(52px, 6.4vw, 76px);
+    font-weight: 800;
+    color: var(--amber);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    display: block;
+    margin-bottom: 12px;
+  }
+  .counter-num .unit {
+    font-size: 0.45em;
+    color: rgba(255,255,255,0.7);
+    margin-left: 4px;
+    font-weight: 700;
+  }
+  .counter-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16.8px;
+    color: rgba(255,255,255,0.75);
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .counter-source {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12.6px;
+    color: rgba(255,255,255,0.45);
+    margin-top: 6px;
+    letter-spacing: 0.04em;
+  }
+
+  /* === Case studies === */
+  .cases {
+    background: var(--paper);
+    padding: 96px 0;
+  }
+  .cases-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .case-card {
+    background: var(--paper);
+    border: 1px solid var(--gray-100);
+    border-radius: var(--r-xl);
+    padding: 36px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .case-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--teal);
+  }
+  .case-client {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: var(--navy);
+    font-weight: 800;
+    margin-bottom: 4px;
+    letter-spacing: -0.01em;
+  }
+  .case-sector {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.2px;
+    color: var(--ink-300);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .case-headline {
+    font-family: 'Inter', sans-serif;
+    font-size: 21.6px;
+    color: var(--navy);
+    line-height: 1.4;
+    margin: 0 0 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+  }
+  .case-results {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    padding: 20px;
+    background: var(--gray-50);
+    border-radius: var(--r-md);
+    margin-bottom: 24px;
+  }
+  .case-result .num {
+    font-family: 'Inter', sans-serif;
+    font-size: 31.2px;
+    color: var(--teal);
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    display: block;
+    margin-bottom: 4px;
+  }
+  .case-result .label {
+    font-size: 13.8px;
+    color: var(--ink-500);
+    line-height: 1.3;
+  }
+  .case-link {
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    font-size: 16.8px;
+    color: var(--teal);
+  }
+
+  /* === Live insights === */
+  .insights-live {
+    background: var(--gray-50);
+    padding: 96px 0;
+  }
+  .insights-row {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .feed {
+    background: var(--paper);
+    border-radius: var(--r-xl);
+    border: 1px solid var(--gray-100);
+    overflow: hidden;
+  }
+  .feed-header {
+    padding: 20px 28px;
+    border-bottom: 1px solid var(--gray-100);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .feed-header h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 20.4px;
+    color: var(--navy);
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .feed-live {
+    width: 8px; height: 8px;
+    background: var(--green);
+    border-radius: 50%;
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  .feed-channels {
+    display: flex;
+    gap: 14px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.8px;
+    color: var(--ink-300);
+  }
+  .feed-item {
+    padding: 22px 28px;
+    border-bottom: 1px solid var(--gray-100);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    transition: background 0.15s;
+    cursor: pointer;
+  }
+  .feed-item:hover { background: var(--gray-50); }
+  .feed-item:last-child { border-bottom: none; }
+  .feed-source {
+    width: 36px; height: 36px;
+    border-radius: var(--r-sm);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15.6px;
+  }
+  .feed-source.linkedin { background: #0A66C2; }
+  .feed-source.research { background: var(--navy); }
+  .feed-source.event { background: var(--amber); color: var(--navy-dark); }
+  .feed-source.press { background: var(--teal); }
+  .feed-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.8px;
+    color: var(--ink-300);
+    margin-bottom: 6px;
+  }
+  .feed-meta .sep { color: var(--gray-200); }
+  .feed-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 17.4px;
+    color: var(--navy);
+    font-weight: 600;
+    line-height: 1.4;
+    margin: 0 0 6px;
+    letter-spacing: -0.005em;
+  }
+  .feed-sub {
+    font-size: 15.6px;
+    color: var(--ink-500);
+    line-height: 1.5;
+    margin: 0;
+  }
+  .feed-engagement {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13.2px;
+    color: var(--ink-300);
+  }
+  .feed-engagement span {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  /* Event card */
+  .event-card {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--teal-darker) 100%);
+    color: #FFF;
+    border-radius: var(--r-xl);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+  }
+  .event-card::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 250px; height: 250px;
+    background: radial-gradient(circle, rgba(224,172,43,0.18), transparent 60%);
+    pointer-events: none;
+  }
+  .event-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--amber);
+    color: var(--navy-dark);
+    padding: 5px 12px;
+    border-radius: var(--r-pill);
+    font-family: 'Inter', sans-serif;
+    font-size: 12.6px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .event-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 28.8px;
+    color: #FFF;
+    margin: 0 0 12px;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    position: relative;
+    z-index: 1;
+  }
+  .event-card p {
+    color: rgba(255,255,255,0.75);
+    font-size: 17.4px;
+    margin: 0 0 24px;
+    line-height: 1.55;
+    position: relative;
+    z-index: 1;
+  }
+  .event-details {
+    display: grid;
+    gap: 12px;
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 1;
+  }
+  .event-detail {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255,255,255,0.85);
+    font-size: 16.2px;
+  }
+  .event-detail svg {
+    width: 18px; height: 18px;
+    color: var(--amber);
+    flex-shrink: 0;
+  }
+  .event-detail strong { color: #FFF; font-weight: 600; }
+
+  /* === Newsletter capture === */
+  .newsletter {
+    background: var(--paper);
+    padding: 96px 0;
+  }
+  .newsletter-card {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--teal-50) 100%);
+    border-radius: var(--r-xl);
+    padding: 64px;
+    border: 1px solid var(--gray-100);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .newsletter-card h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(33.6px, 4.2vw, 45.6px);
+    color: var(--navy);
+    margin: 0 0 12px;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    line-height: 1.15;
+  }
+  .newsletter-card p {
+    font-size: 19.2px;
+    color: var(--ink-500);
+    margin: 0 0 24px;
+    line-height: 1.6;
+  }
+  .newsletter-perks {
+    display: grid;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .newsletter-perks li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16.8px;
+    color: var(--ink-700);
+  }
+  .newsletter-perks svg {
+    width: 18px; height: 18px;
+    color: var(--green);
+    flex-shrink: 0;
+  }
+  .newsletter-form {
+    background: var(--paper);
+    border-radius: var(--r-lg);
+    padding: 32px;
+    border: 1px solid var(--gray-100);
+    box-shadow: var(--shadow-md);
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 14px;
+  }
+  .form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .form-field.full { grid-column: span 2; }
+  .form-field label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.4px;
+    color: var(--ink-500);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+  .form-field input,
+  .form-field select {
+    padding: 11px 14px;
+    border: 1px solid var(--gray-200);
+    border-radius: var(--r-sm);
+    font-family: 'Karla', sans-serif;
+    font-size: 16.8px;
+    color: var(--ink-700);
+    background: var(--paper);
+    transition: border 0.15s;
+  }
+  .form-field input:focus,
+  .form-field select:focus {
+    outline: none;
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(20,128,161,0.12);
+  }
+  .form-submit {
+    width: 100%;
+    margin-top: 14px;
+    justify-content: center;
+  }
+  .form-note {
+    margin-top: 12px;
+    font-size: 13.8px;
+    color: var(--ink-300);
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* === Final CTA === */
+  .final-cta {
+    background: linear-gradient(135deg, var(--navy-dark) 0%, var(--navy) 50%, var(--teal-darker) 100%);
+    color: #FFF;
+    padding: 96px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(circle at 30% 70%, rgba(224,172,43,0.15), transparent 40%),
+      radial-gradient(circle at 70% 30%, rgba(20,128,161,0.30), transparent 40%);
+  }
+  .final-cta-inner {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .final-cta h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(36px, 5.4vw, 60px);
+    color: #FFF;
+    margin: 0 0 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+  }
+  .final-cta h2 em {
+    font-style: normal;
+    color: var(--amber);
+  }
+  .final-cta p {
+    font-size: 22.8px;
+    color: rgba(255,255,255,0.78);
+    margin: 0 auto 40px;
+    max-width: 600px;
+    line-height: 1.55;
+  }
+  .final-cta-buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* === Footer === */
+  .footer {
+    background: var(--navy-darker);
+    color: rgba(255,255,255,0.6);
+    padding: 64px 0 32px;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 48px;
+  }
+  .footer-brand .logo-text .name { color: #FFF; }
+  .footer-brand .logo-text .sub { color: rgba(255,255,255,0.5); }
+  .footer-brand p {
+    font-size: 16.8px;
+    line-height: 1.65;
+    margin: 20px 0 18px;
+  }
+  .footer-addr {
+    font-size: 15.6px;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.7;
+  }
+  .footer h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 14.4px;
+    color: var(--amber);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin: 0 0 18px;
+    font-weight: 700;
+  }
+  .footer ul { list-style: none; padding: 0; margin: 0; }
+  .footer li { margin-bottom: 10px; }
+  .footer li a {
+    font-size: 16.2px;
+    color: rgba(255,255,255,0.55);
+    transition: color 0.2s;
+  }
+  .footer li a:hover { color: var(--teal-light); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 24px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 15px;
+    color: rgba(255,255,255,0.4);
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .footer-bottom-links {
+    display: flex;
+    gap: 24px;
+  }
+
+  /* === Floating CTA === */
+  .floating-cta {
+    position: fixed;
+    bottom: 24px; right: 24px;
+    background: var(--navy);
+    color: #FFF;
+    padding: 14px 22px;
+    border-radius: var(--r-pill);
+    box-shadow: var(--shadow-xl);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16.8px;
+    z-index: 50;
+    transition: all 0.3s;
+    border: 2px solid rgba(255,255,255,0.1);
+    cursor: pointer;
+  }
+  .floating-cta:hover {
+    background: var(--teal);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg), 0 0 30px rgba(20,128,161,0.4);
+  }
+  .floating-cta .pulse-ring {
+    width: 10px; height: 10px;
+    background: var(--green);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(45,168,108,0.7);
+    animation: ring 2s infinite;
+  }
+  @keyframes ring {
+    0% { box-shadow: 0 0 0 0 rgba(45,168,108,0.7); }
+    70% { box-shadow: 0 0 0 12px rgba(45,168,108,0); }
+    100% { box-shadow: 0 0 0 0 rgba(45,168,108,0); }
+  }
+
+  /* === Reveal animations === */
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* === Responsive === */
+  @media (max-width: 1100px) {
+    .hero-grid, .ifrs-grid, .insights-row, .newsletter-card { grid-template-columns: 1fr; gap: 48px; }
+    .sector-content { grid-template-columns: 1fr; gap: 28px; }
+    .bento-grid { grid-template-columns: repeat(4, 1fr); }
+    .bento-card.large { grid-column: span 4; }
+    .bento-card.medium { grid-column: span 2; }
+    .bento-card.wide { grid-column: span 4; }
+    .resources-grid, .cases-grid { grid-template-columns: repeat(2, 1fr); }
+    .footer-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .counter-grid { grid-template-columns: repeat(2, 1fr); }
+    .counter-cell:nth-child(2) { border-right: none; }
+    .compare-row { grid-template-columns: 1.5fr 1fr 1fr 1fr; padding: 16px 20px; font-size: 15.6px; }
+    .nav-menu { display: none; }
+  }
+  @media (max-width: 640px) {
+    .section { padding: 64px 0; }
+    .bento-grid { grid-template-columns: 1fr; }
+    .bento-card.large, .bento-card.medium, .bento-card.wide, .bento-card.small { grid-column: span 1; }
+    .resources-grid, .cases-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .counter-grid { grid-template-columns: 1fr; }
+    .counter-cell { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.12); padding: 20px 0; }
+    .counter-cell:last-child { border-bottom: none; }
+    .compare-row { grid-template-columns: 1fr 1fr 1fr 1fr; font-size: 14.4px; }
+    .col.feature { grid-column: span 4; margin-bottom: 6px; font-size: 16.8px; }
+    .compare-row.header { display: none; }
+    .ifrs h2, .hero h1, .section-title, .final-cta h2 { font-size: clamp(33.6px, 8.4vw, 48px) !important; }
+    .form-row { grid-template-columns: 1fr; }
+    .form-field.full { grid-column: span 1; }
+    .newsletter-card, .hero-widget { padding: 28px; }
+    .floating-cta { bottom: 16px; right: 16px; padding: 12px 18px; font-size: 15.6px; }
+    .nav { gap: 12px; }
+    .nav-actions .btn { padding: 9px 16px; font-size: 15.6px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Announcement bar with countdown -->
+<div class="announce">
+  <div class="container announce-inner">
+    <span class="announce-tag">Mandate</span>
+    <span><strong>IFRS S1/S2 mandatory reporting</strong> for IDX main-board issuers begins</span>
+    <span class="countdown"><span class="pulse-dot"></span> Jan 2027 · 8 months left</span>
+    <a href="#ifrs">See readiness program →</a>
+  </div>
+</div>
+
+<!-- Sticky navigation with mega menu -->
+<div class="nav-wrap">
+  <div class="container nav">
+    <a href="#" class="logo-block" aria-label="CESGS UNAIR home">
+      <img class="logo-img" src="https://cesgs.unair.ac.id/wp-content/uploads/2020/07/cesgs-logo-png-1-e1594365286798.png" alt="CESGS UNAIR" referrerpolicy="no-referrer" />
+    </a>
+
+    <nav class="nav-menu">
+      <div class="nav-item">
+        <a href="#">Solutions <span class="caret">▼</span></a>
+        <div class="mega">
+          <div class="mega-grid">
+            <a href="#ifrs" class="mega-item">
+              <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></span>
+              <span class="mega-text">
+                <span class="title">IFRS S1/S2 Readiness</span>
+                <span class="desc">90-day mandate readiness program</span>
+              </span>
+            </a>
+            <a href="#" class="mega-item">
+              <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></span>
+              <span class="mega-text">
+                <span class="title">Sustainability Reporting</span>
+                <span class="desc">OJK, GRI, SASB aligned disclosure</span>
+              </span>
+            </a>
+            <a href="#" class="mega-item">
+              <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M18 17V9M13 17V5M8 17v-3"/></svg></span>
+              <span class="mega-text">
+                <span class="title">ESGI Dataset</span>
+                <span class="desc">Indonesia ESG benchmark data</span>
+              </span>
+            </a>
+            <a href="#" class="mega-item">
+              <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span>
+              <span class="mega-text">
+                <span class="title">ESG Strategic</span>
+                <span class="desc">Board-level ESG strategy &amp; KPI</span>
+              </span>
+            </a>
+            <a href="#" class="mega-item">
+              <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 11-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 11-4 0v-.09a1.65 1.65 0 00-1-1.51 1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 11-2.83-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 110-4h.09a1.65 1.65 0 001.51-1 1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 112.83-2.83l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 114 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 112.83 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 110 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></span>
+              <span class="mega-text">
+                <span class="title">ESG Rating</span>
+                <span class="desc">MSCI, Sustainalytics, FTSE uplift</span>
+              </span>
+            </a>
+            <a href="#" class="mega-item">
+              <span class="mega-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5"/></svg></span>
+              <span class="mega-text">
+                <span class="title">Capacity Building</span>
+                <span class="desc">Board, exec, &amp; team training</span>
+              </span>
+            </a>
+          </div>
+          <div class="mega-cta">
+            <div class="featured">
+              <strong>Not sure where to start?</strong>
+              Take the 5-minute ESG readiness assessment
+            </div>
+            <a href="#assessment" class="btn btn-outline btn-lg">Start assessment <span class="arrow">→</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="nav-item"><a href="#sectors">By Sector <span class="caret">▼</span></a></div>
+      <div class="nav-item"><a href="#cases">Case Studies</a></div>
+      <div class="nav-item"><a href="#resources">Resources <span class="caret">▼</span></a></div>
+      <div class="nav-item"><a href="#about">About</a></div>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#" class="btn btn-ghost">Sign in</a>
+      <a href="#contact" class="btn btn-primary">Book consultation <span class="arrow">→</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-pill"><span class="dot"></span> #1 ESG Research Center in Indonesia</span>
+      <h1>Built for the <span class="underline">boardroom.</span><br>Anchored in <em>academic rigor.</em></h1>
+      <p class="hero-lead">Indonesia's only ESG advisory combining IFRS Sustainability Alliance access, PUI-PT academic authority, and Triple Helix delivery. Trusted by Astra, Indosat, SKK Migas, Petrokimia Gresik, and OJK.</p>
+      <div class="hero-cta">
+        <a href="#ifrs" class="btn btn-primary btn-lg">Start IFRS Readiness <span class="arrow">→</span></a>
+        <a href="#assessment" class="btn btn-outline btn-lg">Free readiness check</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>50+ enterprise engagements</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>IFRS Alliance member</span>
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>PUI-PT designated</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Interactive Assessment Widget -->
+    <div class="hero-widget" id="assessment">
+      <div class="widget-header">
+        <span class="widget-badge"><span class="widget-live"></span> Live assessment</span>
+        <span class="mono" style="font-size: 13.2px;color:var(--ink-300);">~5 min</span>
+      </div>
+      <h3 class="widget-title">ESG Readiness Check</h3>
+      <p class="widget-sub">Where do you stand against the January 2027 IFRS S1/S2 mandate? Answer 6 questions, get a custom report.</p>
+      <div class="widget-progress">
+        <div class="widget-progress-bar" id="widget-progress-bar"></div>
+      </div>
+      <div class="widget-meta">
+        <span id="widget-completed"><strong style="color:var(--navy);">0 of 6</strong> questions answered</span>
+        <span class="mono" id="widget-score">Score: <strong style="color:var(--teal);">0/100</strong></span>
+      </div>
+      <div class="widget-questions" id="widget-questions" style="margin-top:24px;">
+        <div class="widget-q" role="checkbox" tabindex="0" aria-checked="false">
+          <span class="q-num">Q1</span>
+          <span class="q-text">Have you published a sustainability report in the past 12 months?</span>
+          <span class="q-check"></span>
+        </div>
+        <div class="widget-q" role="checkbox" tabindex="0" aria-checked="false">
+          <span class="q-num">Q2</span>
+          <span class="q-text">Do you have a board-approved materiality matrix?</span>
+          <span class="q-check"></span>
+        </div>
+        <div class="widget-q" role="checkbox" tabindex="0" aria-checked="false">
+          <span class="q-num">Q3</span>
+          <span class="q-text">Have you completed a Scope 1, 2, and 3 GHG inventory?</span>
+          <span class="q-check"></span>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary widget-cta">Continue assessment <span class="arrow">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Logo strip -->
+<section class="logo-strip">
+  <div class="container">
+    <p class="logo-strip-label">Trusted across regulated sectors</p>
+    <div class="logo-grid">
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2024/04/astra-600x241.png" alt="Astra International" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">ASTRA</span>
+        <span class="sub">Conglomerate</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2021/02/logo-indosat-400x139.png" alt="Indosat Ooredoo Hutchison" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">INDOSAT</span>
+        <span class="sub">Telco</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2024/02/1280px-Logo_of_SKK_Migas.svg-400x261.png" alt="SKK Migas" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">SKK Migas</span>
+        <span class="sub">Oil &amp; Gas</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2024/04/Petrokimia_Gresik_logo.svg-400x258.png" alt="Petrokimia Gresik" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">Petrokimia</span>
+        <span class="sub">Manufacturing</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2021/02/rinov-sinarmas-400x70.png" alt="Sinar Mas" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">Sinar Mas</span>
+        <span class="sub">Forestry</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2021/02/ojk-400x174.png" alt="Otoritas Jasa Keuangan" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">OJK</span>
+        <span class="sub">Regulator</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2024/02/ADB-logo-stacked-e1708961719639-400x270.png" alt="Asian Development Bank" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">ADB</span>
+        <span class="sub">Multilateral</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2024/07/Logo-BRIN_Lanscape_Colour-400x154.png" alt="Badan Riset dan Inovasi Nasional" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">BRIN</span>
+        <span class="sub">Research</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2026/03/universitas-internasional-batam.png" alt="Universitas Internasional Batam" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">UIB</span>
+        <span class="sub">Academic</span>
+      </div>
+      <div class="client-logo image">
+        <span class="logo-frame">
+          <img src="https://cesgs.unair.ac.id/wp-content/uploads/2021/02/logo-smfl.png" alt="Sumitomo Mitsui Finance and Leasing" referrerpolicy="no-referrer" loading="eager" onerror="this.style.display='none';this.parentElement.nextElementSibling.style.display='block';" />
+        </span>
+        <span class="label" style="display:none;">SMFL</span>
+        <span class="sub">Finance</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Member of -->
+<section class="memberships">
+  <div class="container">
+    <div class="memberships-inner">
+      <div class="memberships-text">
+        <span class="memberships-eyebrow">Member of</span>
+        <h3>A founding Indonesian voice in global sustainability standard-setting.</h3>
+        <p>CESGS is the only Indonesian research center that is a member of the IFRS Sustainability Alliance, giving us a direct line into ISSB methodology, technical advisors, and the evolution of IFRS S1/S2 standards. Every disclosure we deliver is anchored in the global baseline, before it is translated into the Indonesian regulatory context.</p>
+      </div>
+      <div class="memberships-logos">
+        <div class="member-badge">
+          <div class="member-logo-frame">
+            <img src="https://cesgs.unair.ac.id/wp-content/uploads/2026/03/ifrs-alliance.png" alt="IFRS Sustainability Alliance Member" referrerpolicy="no-referrer" />
+          </div>
+          <div class="member-meta">
+            <div class="member-name">IFRS Sustainability Alliance</div>
+            <div class="member-role">Founding Indonesian member &middot; Since&nbsp;2024</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IFRS S1/S2 Hero Program -->
+<section class="ifrs" id="ifrs">
+  <div class="container ifrs-grid">
+    <div>
+      <span class="ifrs-eyebrow">★ Featured Program</span>
+      <h2>A clock has started for <em>Indonesian issuers.</em></h2>
+      <p class="ifrs-lead">From January 2027, IFRS S1/S2 disclosure becomes mandatory for IDX main-board issuers. CESGS is the only Indonesian advisory combining IFRS Alliance methodology, academic-grade assurance, and an OJK-aligned filing path.</p>
+
+      <div class="timeline-card">
+        <h4>Regulatory timeline</h4>
+        <div class="tl-item">
+          <span class="tl-date">Q4 2026</span>
+          <span class="tl-text">TKBI 3.0 release expands KBLI coverage to ~537 additional codes</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">Jan 2027</span>
+          <span class="tl-text">IFRS S1/S2 reporting becomes mandatory for IDX main-board issuers</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2028</span>
+          <span class="tl-text">Phased extension to non-listed FIs and large emitters</span>
+        </div>
+        <div class="tl-item">
+          <span class="tl-date">2030</span>
+          <span class="tl-text">Full alignment with global ISSB baseline expected</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="tier-list">
+        <div class="tier">
+          <div>
+            <div class="tier-head">
+              <span class="tier-name">Standard</span>
+              <span class="tier-dur">/ 90 days</span>
+            </div>
+            <p class="tier-desc">Gap assessment, materiality matrix refresh, S1/S2 disclosure outline. Ideal for companies with existing reporting.</p>
+            <div class="tier-feats">
+              <span class="tier-feat">Gap assessment</span>
+              <span class="tier-feat">Materiality matrix</span>
+              <span class="tier-feat">Disclosure outline</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier featured">
+          <div>
+            <div class="tier-head">
+              <span class="tier-name">Premium</span>
+              <span class="tier-dur">/ 120 days</span>
+              <span class="tier-best">Most popular</span>
+            </div>
+            <p class="tier-desc">Standard + GHG inventory (Scope 1/2/3), scenario analysis, board readiness sessions. Best for first-time IFRS reporters.</p>
+            <div class="tier-feats">
+              <span class="tier-feat">All Standard</span>
+              <span class="tier-feat">GHG inventory</span>
+              <span class="tier-feat">Scenario analysis</span>
+              <span class="tier-feat">Board readiness</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tier">
+          <div>
+            <div class="tier-head">
+              <span class="tier-name">Enterprise</span>
+              <span class="tier-dur">/ 6 months</span>
+            </div>
+            <p class="tier-desc">Premium + Net Zero roadmap, ESG committee charter, assurance prep. For complex multi-entity organizations.</p>
+            <div class="tier-feats">
+              <span class="tier-feat">All Premium</span>
+              <span class="tier-feat">Net Zero roadmap</span>
+              <span class="tier-feat">Committee design</span>
+              <span class="tier-feat">Assurance prep</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tier-cta">
+        <a href="#contact" class="btn btn-amber btn-lg">Reserve readiness slot <span class="arrow">→</span></a>
+        <a href="#" class="btn btn-outline-light btn-lg">Download playbook</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- What's inside this program -->
+  <div class="container inside-program">
+    <div class="inside-head">
+      <span class="inside-eyebrow">Inside the program</span>
+      <h3>Three CESGS capabilities, fused into one outcome.</h3>
+      <p>This program is a packaged bundle of three of our six core solutions. It is not a standalone product line, but a use-case-specific outcome built for one regulatory window.</p>
+    </div>
+
+    <div class="inside-grid">
+      <div class="inside-card">
+        <div class="inside-num">01</div>
+        <div class="inside-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h4>ESG Strategic</h4>
+        <p class="inside-role">Strategy &amp; analytical engine</p>
+        <ul>
+          <li>Materiality matrix and pillar architecture</li>
+          <li>GHG inventory (Scope 1, 2, 3)</li>
+          <li>Scenario analysis and stress testing</li>
+          <li>Net Zero roadmap design</li>
+          <li>ESG committee charter</li>
+        </ul>
+      </div>
+
+      <div class="inside-plus">+</div>
+
+      <div class="inside-card">
+        <div class="inside-num">02</div>
+        <div class="inside-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h4>Sustainability Report</h4>
+        <p class="inside-role">Disclosure &amp; assurance anchor</p>
+        <ul>
+          <li>IFRS S1/S2 disclosure outline</li>
+          <li>OJK, GRI, SASB alignment</li>
+          <li>Audit-ready data validation</li>
+          <li>Filing path and timeline coordination</li>
+          <li>Third-party assurance preparation</li>
+        </ul>
+      </div>
+
+      <div class="inside-plus">+</div>
+
+      <div class="inside-card">
+        <div class="inside-num">03</div>
+        <div class="inside-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 4 3 6 3s6-2 6-3v-5"/></svg>
+        </div>
+        <h4>Capacity Building</h4>
+        <p class="inside-role">Internal capability &amp; enablement</p>
+        <ul>
+          <li>Board and commissioner readiness</li>
+          <li>ESG committee onboarding</li>
+          <li>Cross-division team training</li>
+          <li>Sustained-after-engagement playbook</li>
+          <li>Ongoing technical clinics</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="inside-backbone">
+      <span class="backbone-tag">Methodology backbone</span>
+      <p><strong>Research &amp; Policy</strong> sits behind everything: peer-reviewed IFRS Alliance methodology, OJK regulatory authoring, and academic-grade analytical rigor that distinguishes CESGS from commercial consultancies. It is not invoiced separately. It is built in.</p>
+    </div>
+
+    <div class="inside-note">
+      <span class="note-label">Not part of this program</span>
+      <div class="note-items">
+        <span class="note-item">ESGI Dataset</span>
+        <span class="note-item">ESG Rating</span>
+      </div>
+      <p>These two solutions are sold as separate products and can be added on, but are not bundled into IFRS Readiness by default.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sector tabs -->
+<section class="sectors" id="sectors">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">By Sector</span>
+      <h2 class="section-title">Sector-specific ESG playbooks, <em>built from real engagements.</em></h2>
+      <p class="section-lead">Our methodology stays consistent. Application is bespoke to your sector's regulatory exposure, material topics, and stakeholder expectations.</p>
+    </div>
+
+    <div class="sector-tabs">
+      <button class="sector-tab active" data-sector="banking">Banking &amp; Finance <span class="count">14</span></button>
+      <button class="sector-tab" data-sector="oilgas">Oil, Gas &amp; Mining <span class="count">9</span></button>
+      <button class="sector-tab" data-sector="manufacturing">Manufacturing <span class="count">11</span></button>
+      <button class="sector-tab" data-sector="telco">Telecommunications <span class="count">4</span></button>
+      <button class="sector-tab" data-sector="consumer">Consumer Goods <span class="count">7</span></button>
+      <button class="sector-tab" data-sector="forestry">Forestry &amp; Agri <span class="count">6</span></button>
+    </div>
+
+    <div class="sector-content" id="sector-content">
+      <!-- Content rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- Bento differentiation -->
+<section class="bento">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Why CESGS</span>
+      <h2 class="section-title">A position only <em>academia</em> can occupy.</h2>
+      <p class="section-lead">Big 4 firms offer global standards. Local boutiques offer speed. CESGS combines national authority, IFRS Alliance access, and academic neutrality. The open quadrant in Indonesian ESG advisory.</p>
+    </div>
+
+    <div class="bento-grid">
+      <div class="bento-card large dark">
+        <span class="bento-tag">Government-recognized</span>
+        <h3>Indonesia's only PUI-PT for Sustainable Business</h3>
+        <p>Designated by Kemenristekdikti as a National Center of Excellence. No other Indonesian ESG advisory holds this status, which signals state-recognized scientific authority to regulators and listed issuers.</p>
+        <div style="display:flex;gap:24px;margin-top:32px;">
+          <div>
+            <span class="bento-big-num" style="font-size: 57.6px;">1</span>
+            <p style="font-size: 15.6px;">Of its kind in Indonesia</p>
+          </div>
+          <div>
+            <span class="bento-big-num" style="font-size: 57.6px;">8+</span>
+            <p style="font-size: 15.6px;">Years operating</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bento-card medium teal">
+        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+        <h3>IFRS Sustainability Alliance member</h3>
+        <p>Direct access to ISSB methodology, technical advisors, and the global IFRS S1/S2 standard-setting process.</p>
+      </div>
+
+      <div class="bento-card small">
+        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/></svg></div>
+        <h3>60+ experts</h3>
+        <p>Active researchers, certified consultants, and policy advisors.</p>
+      </div>
+
+      <div class="bento-card small">
+        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>11 sectors</h3>
+        <p>From banking to extractives to consumer goods.</p>
+      </div>
+
+      <div class="bento-card wide">
+        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <h3>Triple Helix delivery model</h3>
+        <p>Academic neutrality from Universitas Airlangga, industry depth from senior consulting practice, and policy engagement at OIKN and OJK. Three perspectives. One integrated team.</p>
+      </div>
+
+      <div class="bento-card small dark">
+        <span class="bento-big-num" style="font-size: 50.4px;">800+</span>
+        <p style="font-size: 14.4px;">Issuers facing 2027 mandate</p>
+      </div>
+
+      <div class="bento-card small">
+        <div class="bento-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <h3>7 forums</h3>
+        <p>Years of Indonesia ESG Leaders Forum.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Comparison table -->
+<section class="compare">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">How we compare</span>
+      <h2 class="section-title">CESGS vs <em>the alternatives.</em></h2>
+      <p class="section-lead">A side-by-side of what Indonesian sustainability buyers actually weigh when choosing an ESG advisor.</p>
+    </div>
+
+    <div class="compare-table">
+      <div class="compare-row header">
+        <div class="col feature">Capability</div>
+        <div class="col col-us">CESGS UNAIR</div>
+        <div class="col">Big 4 firms</div>
+        <div class="col">Local boutiques</div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">PUI-PT government designation</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="cross">✕</span></div>
+        <div class="col"><span class="cross">✕</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">IFRS Sustainability Alliance access</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="check">✓</span></div>
+        <div class="col"><span class="cross">✕</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">Indonesian regulatory authoring (OJK, BRIN)</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="partial">Partial</span></div>
+        <div class="col"><span class="partial">Partial</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">Free from audit conflict of interest</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="cross">✕</span></div>
+        <div class="col"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">Sector-specific delivery teams</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="check">✓</span></div>
+        <div class="col"><span class="partial">Limited</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">Indonesia ESG benchmark dataset (ESGI)</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="cross">✕</span></div>
+        <div class="col"><span class="cross">✕</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">Local pricing &amp; IDR billing</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="partial">Premium</span></div>
+        <div class="col"><span class="check">✓</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="col feature">Capacity building &amp; team transfer</div>
+        <div class="col col-us"><span class="check">✓</span></div>
+        <div class="col"><span class="partial">Add-on</span></div>
+        <div class="col"><span class="partial">Limited</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Animated stats counter -->
+<section class="counter-band">
+  <div class="container counter-grid">
+    <div class="counter-cell">
+      <span class="counter-num" data-target="50"><span class="counter-val">0</span><span class="unit">+</span></span>
+      <div class="counter-label">Enterprise engagements delivered</div>
+      <div class="counter-source">2018 to 2026</div>
+    </div>
+    <div class="counter-cell">
+      <span class="counter-num" data-target="800"><span class="counter-val">0</span><span class="unit">+</span></span>
+      <div class="counter-label">IDX issuers facing 2027 mandate</div>
+      <div class="counter-source">Source: IDX, OJK</div>
+    </div>
+    <div class="counter-cell">
+      <span class="counter-num" data-target="60"><span class="counter-val">0</span><span class="unit">+</span></span>
+      <div class="counter-label">Active researchers and certified experts</div>
+      <div class="counter-source">As of 2026</div>
+    </div>
+    <div class="counter-cell">
+      <span class="counter-num" data-target="86"><span class="counter-val">0</span><span class="unit">%</span></span>
+      <div class="counter-label">Avg ESG rating uplift across engagements</div>
+      <div class="counter-source">MSCI &amp; Sustainalytics composite</div>
+    </div>
+  </div>
+</section>
+
+<!-- Case studies -->
+<section class="cases" id="cases">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Case studies</span>
+      <h2 class="section-title">Measurable outcomes, <em>not testimonials.</em></h2>
+      <p class="section-lead">Every CESGS engagement is benchmarked against three KPIs: disclosure quality, rating uplift, and time to filing.</p>
+    </div>
+
+    <div class="cases-grid">
+      <div class="case-card">
+        <div class="case-client">PT Industri &amp; Perdagangan Bintraco Dharma Tbk</div>
+        <div class="case-sector">Automotive Distribution · IDX listed</div>
+        <h3 class="case-headline">From first sustainability report to ISSB-aligned disclosure in 6 months.</h3>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="num">6mo</span>
+            <span class="label">From kickoff to OJK filing</span>
+          </div>
+          <div class="case-result">
+            <span class="num">100%</span>
+            <span class="label">POJK 51 compliance achieved</span>
+          </div>
+        </div>
+        <a href="#" class="case-link">Read full case study <span class="arrow">→</span></a>
+      </div>
+
+      <div class="case-card">
+        <div class="case-client">Major Indonesian state-owned bank</div>
+        <div class="case-sector">Banking · IDX listed</div>
+        <h3 class="case-headline">Built first end-to-end financed emissions inventory across IDR 1,200 trillion loan book.</h3>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="num">Scope 3</span>
+            <span class="label">Financed emissions baselined</span>
+          </div>
+          <div class="case-result">
+            <span class="num">+2 tier</span>
+            <span class="label">MSCI ESG rating improvement</span>
+          </div>
+        </div>
+        <a href="#" class="case-link">Read full case study <span class="arrow">→</span></a>
+      </div>
+
+      <div class="case-card">
+        <div class="case-client">Petrokimia Gresik</div>
+        <div class="case-sector">Fertilizer Manufacturing · BUMN</div>
+        <h3 class="case-headline">Net Zero roadmap aligned to 2060 national target, with sector-leading SROI methodology.</h3>
+        <div class="case-results">
+          <div class="case-result">
+            <span class="num">2060</span>
+            <span class="label">Net Zero pathway endorsed</span>
+          </div>
+          <div class="case-result">
+            <span class="num">SROI 4.2x</span>
+            <span class="label">Social return modeled</span>
+          </div>
+        </div>
+        <a href="#" class="case-link">Read full case study <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Live insights feed + Event card -->
+<section class="insights-live" id="resources">
+  <div class="container">
+    <div class="section-head left" style="margin-bottom:48px;">
+      <span class="section-eyebrow">Live</span>
+      <h2 class="section-title">From the CESGS desk, <em>in real time.</em></h2>
+    </div>
+
+    <div class="insights-row">
+      <div class="feed">
+        <div class="feed-header">
+          <h3><span class="feed-live"></span> Latest from CESGS</h3>
+          <div class="feed-channels">
+            <span>LinkedIn</span>
+            <span>Research</span>
+            <span>Press</span>
+            <span>Events</span>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <div class="feed-source linkedin">in</div>
+          <div>
+            <div class="feed-meta"><span>LinkedIn</span><span class="sep">·</span><span>2 hours ago</span><span class="sep">·</span><span>Prof. Iman Harymawan</span></div>
+            <p class="feed-text">Why Indonesian banks face the steepest IFRS S2 readiness curve in Southeast Asia</p>
+            <p class="feed-sub">New analysis of 27 IDX-listed banks shows only 12% have Scope 3 financed emissions baselines. The 2027 mandate gives 12 months to close the gap.</p>
+            <div class="feed-engagement">
+              <span>♡ 2.4K</span>
+              <span>↻ 312</span>
+              <span>◯ 89 comments</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <div class="feed-source research">R</div>
+          <div>
+            <div class="feed-meta"><span>Research Report</span><span class="sep">·</span><span>Yesterday</span><span class="sep">·</span><span>Free download</span></div>
+            <p class="feed-text">CESGS IDX ESG Disclosure Index 2026: where 800 issuers stand</p>
+            <p class="feed-sub">Annual benchmark mapping disclosure quality across IDX main-board issuers against IFRS S1/S2 criteria, sector by sector.</p>
+            <div class="feed-engagement">
+              <span>↓ 1,247 downloads</span>
+              <span>★ Featured in SWA</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <div class="feed-source press">P</div>
+          <div>
+            <div class="feed-meta"><span>Press</span><span class="sep">·</span><span>3 days ago</span><span class="sep">·</span><span>Bisnis Indonesia</span></div>
+            <p class="feed-text">CESGS and Climateworks Centre formalize ESG capacity partnership</p>
+            <p class="feed-sub">New cross-border program to accelerate climate transition planning across Indonesian heavy industry.</p>
+          </div>
+        </div>
+
+        <div class="feed-item">
+          <div class="feed-source event">E</div>
+          <div>
+            <div class="feed-meta"><span>Event</span><span class="sep">·</span><span>Last week</span><span class="sep">·</span><span>Jakarta</span></div>
+            <p class="feed-text">Indonesia ESG Leaders Forum 2026 hits 1,200+ registered executives</p>
+            <p class="feed-sub">7th annual edition closes with the largest-ever audience of CFOs, Sustainability Directors, and Corporate Secretaries.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="event-card">
+        <span class="event-tag"><span class="pulse-dot"></span> Live registration</span>
+        <h3>IFRS S1/S2 Readiness Masterclass</h3>
+        <p>A 90-minute executive briefing led by Prof. Iman Harymawan and the CESGS technical team. Free for invited issuers and registered partners.</p>
+        <div class="event-details">
+          <div class="event-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span><strong>June 18, 2026</strong> · 14:00 to 15:30 WIB</span>
+          </div>
+          <div class="event-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
+            <span><strong>Virtual</strong> · Zoom webinar + Q&amp;A</span>
+          </div>
+          <div class="event-detail">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            <span><strong>247 issuers</strong> registered so far</span>
+          </div>
+        </div>
+        <a href="#" class="btn btn-amber" style="width:100%;justify-content:center;">Reserve your seat <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter capture with profiling -->
+<section class="newsletter">
+  <div class="container">
+    <div class="newsletter-card">
+      <div>
+        <span class="section-eyebrow">Executive newsletter</span>
+        <h2>The ESG Brief, weekly.</h2>
+        <p>The only Indonesian ESG newsletter written by academic researchers, read by sustainability directors at every major listed issuer. 4,200+ subscribers.</p>
+        <ul class="newsletter-perks">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Regulatory updates from OJK, IDX, BRIN, ISSB</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Quarterly access to ESGI Dataset summaries</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Early invite to executive masterclasses</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+            <span>Free download of annual IDX ESG Disclosure Index</span>
+          </li>
+        </ul>
+      </div>
+
+      <form class="newsletter-form">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="first-name">First name</label>
+            <input id="first-name" type="text" placeholder="Hendi" />
+          </div>
+          <div class="form-field">
+            <label for="last-name">Last name</label>
+            <input id="last-name" type="text" placeholder="Nur Pratama" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field full">
+            <label for="email">Corporate email</label>
+            <input id="email" type="email" placeholder="hendi@company.com" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="role">Your role</label>
+            <select id="role">
+              <option>Select role</option>
+              <option>Board / Commissioner</option>
+              <option>CFO / Finance</option>
+              <option>Sustainability Director</option>
+              <option>Corporate Secretary</option>
+              <option>Legal / Compliance</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="sector">Sector</label>
+            <select id="sector">
+              <option>Select sector</option>
+              <option>Banking &amp; Finance</option>
+              <option>Oil, Gas &amp; Mining</option>
+              <option>Manufacturing</option>
+              <option>Telecommunications</option>
+              <option>Consumer Goods</option>
+              <option>Forestry &amp; Agri</option>
+              <option>Other</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Subscribe to ESG Brief <span class="arrow">→</span></button>
+        <p class="form-note">No spam. Weekly cadence. Unsubscribe anytime. Read by Sustainability Directors at Astra, Indosat, BCA, Mandiri.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA -->
+<section class="final-cta" id="contact">
+  <div class="container final-cta-inner">
+    <span class="ifrs-eyebrow">★ Limited slots for 2026 cohort</span>
+    <h2>Start the IFRS clock <em>on your terms.</em></h2>
+    <p>Book a 30-minute consultation with our managing director. We will assess your readiness, walk through your filing path, and propose the right tier.</p>
+    <div class="final-cta-buttons">
+      <a href="#" class="btn btn-amber btn-lg">Book consultation <span class="arrow">→</span></a>
+      <a href="mailto:info@cesgs.or.id" class="btn btn-outline-light btn-lg">Email info@cesgs.or.id</a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="about">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#" class="logo-block" aria-label="CESGS UNAIR home">
+          <img class="logo-img" src="https://cesgs.unair.ac.id/wp-content/uploads/2026/03/main-footer-logo.png" alt="CESGS UNAIR" referrerpolicy="no-referrer" />
+        </a>
+        <p>The only Indonesian ESG advisory combining IFRS Alliance access, PUI-PT academic authority, and Triple Helix delivery.</p>
+        <div class="footer-addr">
+          ASEEC Tower, 11th Floor<br>
+          Jl. Airlangga 4 to 6, Kec. Gubeng<br>
+          Surabaya, East Java 60286<br>
+          info@cesgs.or.id
+        </div>
+      </div>
+
+      <div>
+        <h5>Solutions</h5>
+        <ul>
+          <li><a href="#ifrs">IFRS S1/S2 Readiness</a></li>
+          <li><a href="#">Sustainability Reporting</a></li>
+          <li><a href="#">ESGI Dataset</a></li>
+          <li><a href="#">ESG Strategic</a></li>
+          <li><a href="#">ESG Rating</a></li>
+          <li><a href="#">Capacity Building</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>By sector</h5>
+        <ul>
+          <li><a href="#sectors">Banking &amp; Finance</a></li>
+          <li><a href="#sectors">Oil, Gas &amp; Mining</a></li>
+          <li><a href="#sectors">Manufacturing</a></li>
+          <li><a href="#sectors">Telecommunications</a></li>
+          <li><a href="#sectors">Consumer Goods</a></li>
+          <li><a href="#sectors">Forestry &amp; Agri</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Resources</h5>
+        <ul>
+          <li><a href="#">IDX ESG Disclosure Index</a></li>
+          <li><a href="#">IFRS S1/S2 Playbook</a></li>
+          <li><a href="#">Methodology papers</a></li>
+          <li><a href="#cases">Case studies</a></li>
+          <li><a href="#">Webinars &amp; events</a></li>
+          <li><a href="#">ESG Brief newsletter</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5>Institute</h5>
+        <ul>
+          <li><a href="#">About CESGS</a></li>
+          <li><a href="#">Experts &amp; team</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Press kit</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 CESGS, Universitas Airlangga. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+        <a href="https://www.instagram.com/cesgs.unair/">Instagram</a>
+        <a href="#">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating CTA -->
+<a href="#contact" class="floating-cta">
+  <span class="pulse-ring"></span>
+  Book consultation
+  <span class="arrow">→</span>
+</a>
+
+<script>
+  // Reveal on scroll
+  const revealEls = document.querySelectorAll('.section-head, .bento-card, .resource-card, .case-card, .tier, .feed-item, .compare-row, .counter-cell');
+  revealEls.forEach(el => el.classList.add('reveal'));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  revealEls.forEach(el => io.observe(el));
+
+  // Counter animation
+  const counters = document.querySelectorAll('.counter-num');
+  const counterIO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.dataset.target);
+        const valEl = el.querySelector('.counter-val');
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 60));
+        const interval = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(interval);
+          }
+          valEl.textContent = current.toLocaleString();
+        }, 24);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold: 0.4 });
+  counters.forEach(c => counterIO.observe(c));
+
+  // Sector tab interaction with content swap
+  const sectorData = {
+    banking: {
+      title: 'Banking & Finance',
+      desc: "Indonesia's commercial banks face the steepest sustainability disclosure curve, with POJK 51 already in force and IFRS S1/S2 plus EU CSRD spillover beginning January 2027. We help banks build climate-aligned portfolios, scope 3 financed emissions inventories, and TCFD-aligned governance.",
+      stats: [
+        { num: '14', label: 'Bank engagements completed' },
+        { num: '86%', label: 'Avg uplift in ESG rating scores' }
+      ],
+      bullets: [
+        'Financed emissions inventory (PCAF aligned)',
+        'Climate transition plan and stress testing',
+        'Sustainable finance taxonomy mapping',
+        'Board-level climate governance design'
+      ],
+      cta: 'View banking case studies',
+      quote: 'CESGS helped us move from compliance reporting to a strategic sustainability roadmap that our board now reviews quarterly. The IFRS Alliance methodology gave us confidence ahead of the 2027 mandate.',
+      author: 'Arief Rahman',
+      authorTitle: 'Corporate Legal, PT Bintraco Dharma Tbk',
+      initials: 'AR'
+    },
+    oilgas: {
+      title: 'Oil, Gas & Mining',
+      desc: "Extractive industries carry the heaviest scope 1 emissions in Indonesia and the strictest scrutiny from regulators and lenders. We deliver PROPER assistance, Net Zero pathway design, and SROI methodology for fence-line communities, fully aligned with SKK Migas and ESDM expectations.",
+      stats: [
+        { num: '9', label: 'Engagements with BUMN extractives' },
+        { num: '2060', label: 'Net Zero pathways endorsed' }
+      ],
+      bullets: [
+        'GHG inventory across Scope 1, 2, 3 (ISO 14064)',
+        'Net Zero roadmap to 2060 national target',
+        'PROPER assistance and beyond-compliance program',
+        'Social Return on Investment for community programs'
+      ],
+      cta: 'View extractives case studies',
+      quote: 'Working with CESGS gave us a Net Zero pathway grounded in real Indonesian sector economics, not a translated foreign template. Their academic credibility carried weight with our shareholders and the ministry.',
+      author: 'Strategy Director',
+      authorTitle: 'BUMN Oil & Gas (name held under NDA)',
+      initials: 'OG'
+    },
+    manufacturing: {
+      title: 'Manufacturing',
+      desc: "Indonesia's industrial manufacturers face dual pressure: domestic POJK 51 disclosure on one side, and increasingly strict supply chain ESG requirements from EU and Japanese OEM customers on the other. We bridge both with integrated Scope 3 mapping and product-level lifecycle assessment.",
+      stats: [
+        { num: '11', label: 'Manufacturing engagements' },
+        { num: '45%', label: 'Avg Scope 3 emissions identified' }
+      ],
+      bullets: [
+        'Life Cycle Assessment (ISO 14040 / 14044)',
+        'Scope 3 supply chain emissions baseline',
+        'Green building and energy efficiency roadmap',
+        'IFRS S2 climate disclosure for export markets'
+      ],
+      cta: 'View manufacturing case studies',
+      quote: 'Our European OEM customers now require disclosure we did not even track 18 months ago. CESGS built our LCA capability from zero and prepared us for the next round of CSRD-driven RFPs.',
+      author: 'Sustainability VP',
+      authorTitle: 'Tier-1 Indonesian Manufacturer',
+      initials: 'PM'
+    },
+    telco: {
+      title: 'Telecommunications',
+      desc: "Indonesian telcos increasingly compete on sustainability metrics as enterprise customers and global investors evaluate ESG performance side by side with network coverage. We help operators benchmark, disclose, and act on the metrics that move ratings.",
+      stats: [
+        { num: '4', label: 'Telco engagements' },
+        { num: '+3 tier', label: 'Avg MSCI rating uplift' }
+      ],
+      bullets: [
+        'Network energy efficiency baseline and roadmap',
+        'Digital inclusion impact measurement',
+        'Supply chain ESG due diligence on tower vendors',
+        'Investor-grade sustainability disclosure'
+      ],
+      cta: 'View telecom case studies',
+      quote: 'CESGS distilled what global investors actually care about in Asian telco ESG, then helped us close the gaps that mattered. Within one cycle we moved up two MSCI tiers.',
+      author: 'Investor Relations Head',
+      authorTitle: 'Listed Indonesian Telecom Operator',
+      initials: 'IR'
+    },
+    consumer: {
+      title: 'Consumer Goods',
+      desc: "Consumer brands face a sustainability narrative gap: rising expectations from younger Indonesian consumers, deeper scrutiny from retailers and e-commerce platforms, yet thin internal capability to translate this into product, packaging, and brand decisions.",
+      stats: [
+        { num: '7', label: 'Consumer goods engagements' },
+        { num: '32%', label: 'Avg packaging emissions reduction modeled' }
+      ],
+      bullets: [
+        'Materiality assessment with consumer panels',
+        'Packaging lifecycle and circular economy roadmap',
+        'Human rights due diligence in supply chain',
+        'Brand sustainability narrative aligned to GRI'
+      ],
+      cta: 'View consumer case studies',
+      quote: 'CESGS gave us a framework that connected sustainability commitments to product P&L, not just to the annual report. That changed how our brand team approaches packaging decisions today.',
+      author: 'Head of Sustainability',
+      authorTitle: 'Indonesian FMCG Listed Company',
+      initials: 'CG'
+    },
+    forestry: {
+      title: 'Forestry & Agri',
+      desc: "Indonesian forestry and palm oil companies operate at the center of global ESG scrutiny, with EUDR compliance, RSPO certification, and HCS/HCV assessment all converging. We deliver evidence-grade traceability and a credible Net Zero pathway for high-carbon-stock operations.",
+      stats: [
+        { num: '6', label: 'Forestry and agri engagements' },
+        { num: 'EUDR', label: 'Traceability frameworks built' }
+      ],
+      bullets: [
+        'EUDR readiness and traceability baseline',
+        'HCS and HCV assessment integration',
+        'Land-use carbon accounting (Tier 2/3 IPCC)',
+        'Community grievance and FPIC protocol design'
+      ],
+      cta: 'View forestry case studies',
+      quote: 'CESGS combined academic rigor on land-use carbon with a deep understanding of Indonesian community dynamics. That was the combination we could not get from any global firm.',
+      author: 'Sustainability Director',
+      authorTitle: 'Indonesian Palm Oil Group',
+      initials: 'FA'
+    }
+  };
+
+  const sectorContent = document.getElementById('sector-content');
+  const sectorTabs = document.querySelectorAll('.sector-tab');
+
+  function renderSector(key) {
+    const d = sectorData[key];
+    if (!d) return;
+    sectorContent.innerHTML = `
+      <div>
+        <h3>${d.title}</h3>
+        <p>${d.desc}</p>
+        <div class="sector-stats">
+          ${d.stats.map(s => `
+            <div class="sector-stat">
+              <span class="num">${s.num}</span>
+              <span class="label">${s.label}</span>
+            </div>
+          `).join('')}
+        </div>
+        <ul class="sector-bullets">
+          ${d.bullets.map(b => `<li>${b}</li>`).join('')}
+        </ul>
+        <a href="#" class="btn btn-outline">${d.cta} <span class="arrow">→</span></a>
+      </div>
+      <div class="sector-visual">
+        <p class="sector-quote">${d.quote}</p>
+        <div class="sector-author">
+          <div class="sector-avatar">${d.initials}</div>
+          <div class="sector-author-info">
+            <div class="sector-author-name">${d.author}</div>
+            <div class="sector-author-title">${d.authorTitle}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  sectorTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      sectorTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      renderSector(tab.dataset.sector);
+    });
+  });
+
+  // Initial render
+  renderSector('banking');
+
+  // ESG Readiness Check widget - toggle questions
+  const widgetQs = document.querySelectorAll('#widget-questions .widget-q');
+  const widgetBar = document.getElementById('widget-progress-bar');
+  const widgetCompleted = document.getElementById('widget-completed');
+  const widgetScore = document.getElementById('widget-score');
+  const WIDGET_TOTAL = 6;
+
+  function updateWidget() {
+    const totalDone = document.querySelectorAll('#widget-questions .widget-q.done').length;
+    const progress = Math.round((totalDone / WIDGET_TOTAL) * 100);
+    const score = Math.round((totalDone / WIDGET_TOTAL) * 100);
+    if (widgetBar) widgetBar.style.width = progress + '%';
+    if (widgetCompleted) widgetCompleted.innerHTML = '<strong style="color:var(--navy);">' + totalDone + ' of ' + WIDGET_TOTAL + '</strong> questions answered';
+    if (widgetScore) widgetScore.innerHTML = 'Score: <strong style="color:var(--teal);">' + score + '/100</strong>';
+  }
+
+  widgetQs.forEach(q => {
+    const toggle = () => {
+      q.classList.toggle('done');
+      q.setAttribute('aria-checked', q.classList.contains('done') ? 'true' : 'false');
+      updateWidget();
+    };
+    q.addEventListener('click', toggle);
+    q.addEventListener('keydown', (e) => {
+      if (e.key === ' ' || e.key === 'Enter') {
+        e.preventDefault();
+        toggle();
+      }
+    });
+  });
+
+  updateWidget();
+
+  // Floating CTA hide on scroll near footer
+  const floating = document.querySelector('.floating-cta');
+  const footer = document.querySelector('.footer');
+  window.addEventListener('scroll', () => {
+    const fRect = footer.getBoundingClientRect();
+    if (fRect.top < window.innerHeight) {
+      floating.style.transform = 'translateY(100px)';
+      floating.style.opacity = '0';
+    } else {
+      floating.style.transform = 'translateY(0)';
+      floating.style.opacity = '1';
+    }
+  });
+</script>
+
+</body>
+</html>
